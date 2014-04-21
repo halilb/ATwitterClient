@@ -26,6 +26,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UITableView *tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
+    tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    self.tableView = tableView;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.view addSubview:self.tableView];
+    
+    [self refreshDataWithType:RequestTypeProfile];
     // Do any additional setup after loading the view.
 }
 

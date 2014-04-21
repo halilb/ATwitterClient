@@ -15,6 +15,6 @@
 @property (nonatomic, strong)   NSMutableArray  *dataArray;
 @property (nonatomic, strong)   UITableViewController *tableController;
 
-- (void)refreshData;
+- (void)refreshDataWithType:(RequestType)type;
 
 @end

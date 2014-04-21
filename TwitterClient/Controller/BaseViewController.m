@@ -35,15 +35,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - view methods
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+CGFloat const TextLabelFont = TWEET_TEXT_FONT_SIZE;
+CGFloat const DetailTextLabelFont = TWEET_USER_FONT_SIZE;
+
+- (UIFont*)textLabelFont
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    return [UIFont systemFontOfSize:TextLabelFont];
 }
-*/
+
+- (UIFont*)detailTextLabelFont
+{
+    return [UIFont systemFontOfSize:DetailTextLabelFont];
+}
+
+#pragma mark - root functionality
+
 
 @end

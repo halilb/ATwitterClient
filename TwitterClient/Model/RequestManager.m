@@ -65,6 +65,13 @@
                     [params setObject:@"true" forKey:@"exclude_replies"];
                     [params setObject:@"10" forKey:@"count"];
                     break;
+                case RequestTypeProfile:
+                    url = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/user_timeline.json"];
+                    break;
+                case RequestTypeSearch:
+                    url = [NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json"];
+                    [params setObject:@"test" forKey:@"q"];
+                    break;
                 default:
                     break;
             }

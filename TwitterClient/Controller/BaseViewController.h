@@ -10,4 +10,10 @@
 
 @interface BaseViewController : UIViewController
 
+extern CGFloat const TextLabelFont;
+extern CGFloat const DetailTextLabelFont;
+
+- (UIFont*)textLabelFont;
+- (UIFont*)detailTextLabelFont;
+
 @end
